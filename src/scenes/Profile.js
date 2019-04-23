@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import {withStyles} from '@material-ui/core/styles';
-import AvatarPicker from "material-ui-avatar-picker/lib";
+import AvatarPicker from "material-ui-avatar-picker";
 
 const styles = (theme) => ({
    grid: {
@@ -13,18 +13,34 @@ const styles = (theme) => ({
 
 class Profile extends Component {
    state = {
-      img: null,
+      previewOpen: false,
+      img: "http://www.placekitten.com/400/400",
+      savedImg: "http://www.placekitten.com/400/400"
    };
 
    previewBackgroundColor = "gray";
 
-   handleRequestHide() {
-      console.log("handleRequestHide");
-   }
+   handleFileChange = (dataURI) => {
+      this.setState({
+         img: dataURI,
+         savedImg: this.state.savedImg,
+         previewOpen: true
+      });
+   };
 
-   handleSave() {
-      console.log("handleSave");
-   }
+   handleSave = (dataURI)=> {
+      this.setState({
+         previewOpen: false,
+         img: null,
+         savedImg: dataURI
+      });
+   };
+
+   handleRequestHide = () => {
+      this.setState({
+         previewOpen: false
+      });
+   };
 
    render() {
       return (
@@ -36,7 +52,6 @@ class Profile extends Component {
                   </Typography>
                   <AvatarPicker
                      onRequestHide={this.handleRequestHide}
-                     previewBackgroundColor={this.previewBackgroundColor}
                      onSave={this.handleSave}
                      image={this.state.img}
                      width={400}
