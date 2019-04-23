@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
-import {NavLink, Route, Router, Switch} from 'react-router-dom';
+import {Route, Router, Switch} from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import Splash from './scenes/Splash'
 import Profile from './scenes/Profile';

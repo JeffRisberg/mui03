@@ -9,5 +9,5 @@ const history = createBrowserHistory({basename: '/'});
 
 ReactDOM.render(
    <App history={history}/>,
-   document.getElementById('container')
+   document.getElementById('root')
 );

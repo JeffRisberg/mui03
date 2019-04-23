@@ -4,6 +4,16 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Button from '@material-ui/core/Button';
 import {NavLink} from 'react-router-dom';
+import {withStyles} from '@material-ui/core/styles';
+
+const styles = {
+   root: {
+      textAlign: 'center'
+   },
+   navLink: {
+      color: 'white'
+   }
+};
 
 class NavBar extends Component {
    static propTypes = {
@@ -23,13 +33,8 @@ class NavBar extends Component {
                      </NavLink>
                   </Button>
                   <Button>
-                     <NavLink className={classes.navLink} to='/items'>
-                        Items
-                     </NavLink>
-                  </Button>
-                  <Button>
-                     <NavLink className={classes.navLink} to='/events'>
-                        Events
+                     <NavLink className={classes.navLink} to='/profile'>
+                        Profile
                      </NavLink>
                   </Button>
                </Toolbar>
@@ -39,4 +44,5 @@ class NavBar extends Component {
    }
 }
 
-export default NavBar;
+export default withStyles(styles)(NavBar);
+

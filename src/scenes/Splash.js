@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
-import SignIn from '../components/SignIn'
 import {withStyles} from '@material-ui/core/styles';
 
 /**
@@ -26,7 +25,6 @@ class Splash extends Component {
                   </Typography>
                </CardContent>
             </Card>
-            <SignIn/>
          </div>
       )
    }
