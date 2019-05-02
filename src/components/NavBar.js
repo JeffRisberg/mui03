@@ -33,6 +33,11 @@ class NavBar extends Component {
                      </NavLink>
                   </Button>
                   <Button>
+                     <NavLink className={classes.navLink} to='/catalog'>
+                        Catalog
+                     </NavLink>
+                  </Button>
+                  <Button>
                      <NavLink className={classes.navLink} to='/profile'>
                         Profile
                      </NavLink>

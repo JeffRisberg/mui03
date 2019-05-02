@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import {Route, Router, Switch} from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
-import Splash from './scenes/Splash'
+import Catalog from './scenes/Catalog';
 import Profile from './scenes/Profile';
+import Splash from './scenes/Splash'
 import NavBar from './components/NavBar'
 import './App.css';
 import {withStyles} from '@material-ui/core/styles';
@@ -39,6 +40,7 @@ class App extends Component {
                <NavBar history={history} />
                <Switch>
                   <Route exact path="/" component={Splash}/>
+                  <Route exact path="/catalog" component={Catalog}/>
                   <Route exact path="/profile" component={Profile}/>
                </Switch>
             </Paper>
