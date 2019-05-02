@@ -4,6 +4,8 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import {withStyles} from '@material-ui/core/styles';
 
 /**
@@ -25,6 +27,23 @@ const styles = (theme) => ({
 
 class Catalog extends Component {
 
+   state = {
+      completed: 0,
+   };
+
+   componentDidMount() {
+      this.timer = setInterval(this.progress, 20);
+   }
+
+   componentWillUnmount() {
+      clearInterval(this.timer);
+   }
+
+   progress = () => {
+      const { completed } = this.state;
+      this.setState({ completed: completed >= 100 ? 0 : completed + 1 });
+   };
+
    render() {
       const { classes } = this.props;
 
@@ -40,6 +59,22 @@ class Catalog extends Component {
                      <Avatar alt="Remy Sharp" src="/avatars/1.jpg" className={classes.avatar} />
                      <Avatar alt="Remy Sharp" src="/avatars/1.jpg" className={classes.bigAvatar} />
                   </Grid>
+                  <LinearProgress />
+                  <br />
+                  <LinearProgress color="secondary" />
+                  <div>
+                     <CircularProgress
+                        className={classes.progress}
+                        variant="determinate"
+                        value={this.state.completed}
+                     />
+                     <CircularProgress
+                        className={classes.progress}
+                        variant="determinate"
+                        value={this.state.completed}
+                        color="secondary"
+                     />
+                  </div>
                </CardContent>
             </Card>
          </div>
