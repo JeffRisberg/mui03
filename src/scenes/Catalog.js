@@ -37,8 +37,8 @@ class Catalog extends Component {
                   </Typography>
 
                   <Grid container justify="center" alignItems="center">
-                     <Avatar alt="Remy Sharp" src="/static/images/avatars/1.jpg" className={classes.avatar} />
-                     <Avatar alt="Remy Sharp" src="/static/images/avatars/1.jpg" className={classes.bigAvatar} />
+                     <Avatar alt="Remy Sharp" src="/avatars/1.jpg" className={classes.avatar} />
+                     <Avatar alt="Remy Sharp" src="/avatars/1.jpg" className={classes.bigAvatar} />
                   </Grid>
                </CardContent>
             </Card>
