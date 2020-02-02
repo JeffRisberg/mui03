@@ -21,7 +21,7 @@ class Splash extends Component {
             <Card>
                <CardContent>
                   <Typography gutterBottom variant="h4">
-                     Welcome
+                     Welcome to MUI03
                   </Typography>
                </CardContent>
             </Card>
