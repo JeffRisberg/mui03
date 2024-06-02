@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Paper} from "@mui/material";
 import {Splash} from "./scenes/Splash";
@@ -24,25 +24,21 @@ const styles = {
     },
 };
 
-class App extends Component {
+export function App(props) {
 
-    render() {
-        const {classes, history} = this.props;
+    const {classes, history} = props;
 
-        return (
-            <BrowserRouter history={history}>
-                <Paper>
-                    <NavBar history={history}/>
-                    <Routes>
-                        <Route path="/" element={Splash}/>
-                        <Route path="/catalog" element={Catalog}/>
-                        <Route path="/profile" element={Profile}/>
-                    </Routes>
-                    <Footer />
-                </Paper>
-            </BrowserRouter>
-        )
-    }
+    return (
+        <BrowserRouter history={history}>
+            <Paper>
+                <NavBar history={history}/>
+                <Routes>
+                    <Route path="/" element={Splash}/>
+                    <Route path="/catalog" element={Catalog}/>
+                    <Route path="/profile" element={Profile}/>
+                </Routes>
+                <Footer/>
+            </Paper>
+        </BrowserRouter>
+    )
 }
-
-export default App;
