@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import {withStyles} from '@material-ui/core/styles';
+import Card from '@mui/core/Card'
+import CardContent from '@mui/core/CardContent'
+import Typography from "@mui/material/Typography";
+
 
 /**
  * the welcome screen, with sign-in

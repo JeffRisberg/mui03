@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Button from '@material-ui/core/Button';
+import AppBar from '@mui/core/AppBar'
+import Toolbar from '@maui/core/Toolbar'
+import Button from '@m-ui/core/Button';
 import {NavLink} from 'react-router-dom';
-import {withStyles} from '@material-ui/core/styles';
 
 const styles = {
    root: {
@@ -49,5 +48,5 @@ class NavBar extends Component {
    }
 }
 
-export default withStyles(styles)(NavBar);
+export default NavBar;
 

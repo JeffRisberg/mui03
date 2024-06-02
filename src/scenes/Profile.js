@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import {withStyles} from '@material-ui/core/styles';
+import Card from '@mui/core/Card'
+import CardContent from '@mui/core/CardContent'
+import Typography from '@maui/core/Typography'
 import AvatarPicker from "material-ui-avatar-picker";
 
 const styles = (theme) => ({
@@ -64,4 +63,4 @@ class Profile extends Component {
    }
 }
 
-export default withStyles(styles)(Profile);
+export default Profile;

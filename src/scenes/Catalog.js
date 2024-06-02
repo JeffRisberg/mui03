@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import Avatar from '@material-ui/core/Avatar';
-import Grid from '@material-ui/core/Grid';
-import LinearProgress from '@material-ui/core/LinearProgress';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import {withStyles} from '@material-ui/core/styles';
+import Card from '@mui/core/Card'
+import CardContent from '@mui/core/CardContent'
+import Avatar from '@mui/core/Avatar';
+import Grid from '@mui/core/Grid';
+import LinearProgress from '@mui/core/LinearProgress';
+import CircularProgress from '@mui/core/CircularProgress';
+import Typography from "@mui/material/Typography";
+
 
 /**
  * the catalog screen, with sign-in
@@ -85,4 +85,4 @@ class Catalog extends Component {
    }
 }
 
-export default withStyles(styles)(Catalog);
+export default Catalog;
