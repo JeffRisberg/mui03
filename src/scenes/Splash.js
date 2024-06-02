@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {Card, CardContent, Typography} from "@mui/material";
 
 /**
@@ -10,21 +10,17 @@ const styles = (theme) => ({
     }
 });
 
-class Splash extends Component {
+export function Splash() {
 
-    render() {
-        return (
-            <div>
-                <Card>
-                    <CardContent>
-                        <Typography gutterBottom variant="h4">
-                            Welcome to MUI03
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <Card>
+                <CardContent>
+                    <Typography gutterBottom variant="h4">
+                        Welcome to MUI03
+                    </Typography>
+                </CardContent>
+            </Card>
+        </div>
+    )
 }
-
-export default Splash;

@@ -15,7 +15,8 @@ const styles = {
 class NavBar extends Component {
 
    render() {
-      const {classes} = this.props;
+      const classes = styles;
+
 
       return (
          <div>

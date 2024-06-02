@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {PropTypes} from 'prop-types';
-import Catalog from './scenes/Catalog';
-import Profile from './scenes/Profile';
-import Splash from './scenes/Splash'
-import NavBar from './components/NavBar'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Paper} from "@mui/material";
+import {Splash} from "./scenes/Splash";
+import Catalog from './scenes/Catalog';
+import Profile from './scenes/Profile';
+import NavBar from './components/NavBar'
+import {Footer} from "./components/Footer";
 import './App.css';
 
 const styles = {
@@ -34,10 +34,11 @@ class App extends Component {
                 <Paper>
                     <NavBar history={history}/>
                     <Routes>
-                        <Route exact path="/" component={Splash}/>
-                        <Route exact path="/catalog" component={Catalog}/>
-                        <Route exact path="/profile" component={Profile}/>
+                        <Route path="/" element={Splash}/>
+                        <Route path="/catalog" element={Catalog}/>
+                        <Route path="/profile" element={Profile}/>
                     </Routes>
+                    <Footer />
                 </Paper>
             </BrowserRouter>
         )
