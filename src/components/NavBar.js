@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@mui/core/AppBar'
-import Toolbar from '@maui/core/Toolbar'
-import Button from '@m-ui/core/Button';
-import {NavLink} from 'react-router-dom';
+import {AppBar, Button, Toolbar} from "@mui/material";
+import {NavLink} from "react-router-dom";
 
 const styles = {
    root: {
@@ -15,9 +13,6 @@ const styles = {
 };
 
 class NavBar extends Component {
-   static propTypes = {
-      classes: PropTypes.object.isRequired
-   };
 
    render() {
       const {classes} = this.props;
@@ -27,17 +22,17 @@ class NavBar extends Component {
             <AppBar position="static">
                <Toolbar>
                   <Button>
-                     <NavLink className={classes.navLink} to='/'>
+                     <NavLink style={classes.navLink} to='/'>
                         Home
                      </NavLink>
                   </Button>
                   <Button>
-                     <NavLink className={classes.navLink} to='/catalog'>
+                     <NavLink style={classes.navLink} to='/catalog'>
                         Catalog
                      </NavLink>
                   </Button>
                   <Button>
-                     <NavLink className={classes.navLink} to='/profile'>
+                     <NavLink style={classes.navLink} to='/profile'>
                         Profile
                      </NavLink>
                   </Button>

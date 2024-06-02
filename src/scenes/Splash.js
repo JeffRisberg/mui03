@@ -1,33 +1,30 @@
 import React, {Component} from 'react'
-import Card from '@mui/core/Card'
-import CardContent from '@mui/core/CardContent'
-import Typography from "@mui/material/Typography";
-
+import {Card, CardContent, Typography} from "@mui/material";
 
 /**
  * the welcome screen, with sign-in
  */
 const styles = (theme) => ({
-   grid: {
-      height: '50px',
-   }
+    grid: {
+        height: '50px',
+    }
 });
 
 class Splash extends Component {
 
-   render() {
-      return (
-         <div>
-            <Card>
-               <CardContent>
-                  <Typography gutterBottom variant="h4">
-                     Welcome to MUI03
-                  </Typography>
-               </CardContent>
-            </Card>
-         </div>
-      )
-   }
+    render() {
+        return (
+            <div>
+                <Card>
+                    <CardContent>
+                        <Typography gutterBottom variant="h4">
+                            Welcome to MUI03
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </div>
+        )
+    }
 }
 
-export default withStyles(styles)(Splash);
+export default Splash;

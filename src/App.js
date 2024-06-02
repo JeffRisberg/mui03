@@ -1,52 +1,47 @@
 import React, {Component} from 'react';
 import {PropTypes} from 'prop-types';
-import {Route, Router, Switch} from 'react-router-dom';
-import Paper from '@material-ui/core/Paper';
 import Catalog from './scenes/Catalog';
 import Profile from './scenes/Profile';
 import Splash from './scenes/Splash'
 import NavBar from './components/NavBar'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Paper} from "@mui/material";
 import './App.css';
-import {withStyles} from '@material-ui/core/styles';
 
 const styles = {
-   root: {
-      textAlign: 'center',
-      paddingTop: 200,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      width: 500,
-   },
-   card: {
-      paddingTop: 40,
-      paddingRight: 20,
-      paddingBottom: 20,
-      paddingLeft: 20,
-   },
+    root: {
+        textAlign: 'center',
+        paddingTop: 200,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        width: 500,
+    },
+    card: {
+        paddingTop: 40,
+        paddingRight: 20,
+        paddingBottom: 20,
+        paddingLeft: 20,
+    },
 };
 
 class App extends Component {
-   static propTypes = {
-      classes: PropTypes.object,
-      history: PropTypes.object.isRequired
-   };
 
-   render() {
-      const {classes, history} = this.props;
+    render() {
+        const {classes, history} = this.props;
 
-      return (
-         <Router history={history}>
-            <Paper className={classes.app}>
-               <NavBar history={history} />
-               <Switch>
-                  <Route exact path="/" component={Splash}/>
-                  <Route exact path="/catalog" component={Catalog}/>
-                  <Route exact path="/profile" component={Profile}/>
-               </Switch>
-            </Paper>
-         </Router>
-      )
-   }
+        return (
+            <BrowserRouter history={history}>
+                <Paper>
+                    <NavBar history={history}/>
+                    <Routes>
+                        <Route exact path="/" component={Splash}/>
+                        <Route exact path="/catalog" component={Catalog}/>
+                        <Route exact path="/profile" component={Profile}/>
+                    </Routes>
+                </Paper>
+            </BrowserRouter>
+        )
+    }
 }
 
-export default withStyles(styles)(App);
+export default App;

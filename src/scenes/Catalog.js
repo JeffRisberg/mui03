@@ -1,12 +1,5 @@
 import React, {Component} from 'react'
-import Card from '@mui/core/Card'
-import CardContent from '@mui/core/CardContent'
-import Avatar from '@mui/core/Avatar';
-import Grid from '@mui/core/Grid';
-import LinearProgress from '@mui/core/LinearProgress';
-import CircularProgress from '@mui/core/CircularProgress';
-import Typography from "@mui/material/Typography";
-
+import {Avatar, Card, CardContent, CircularProgress, Grid, LinearProgress, Typography} from "@mui/material";
 
 /**
  * the catalog screen, with sign-in
