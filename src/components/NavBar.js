@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {AppBar, Button, Toolbar} from "@mui/material";
 import {NavLink} from "react-router-dom";
 
@@ -16,7 +15,6 @@ class NavBar extends Component {
 
    render() {
       const classes = styles;
-
 
       return (
          <div>
