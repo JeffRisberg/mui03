@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {Card, CardContent, Checkbox, Typography} from "@mui/material";
 import {FormContainer, TextFieldElement} from "react-hook-form-mui";
-//import AvatarPicker from "material-ui-avatar-picker";
 
 const styles = (theme) => ({
   grid: {
