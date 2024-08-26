@@ -4,7 +4,7 @@ import {Paper} from "@mui/material";
 import {Splash} from "./scenes/Splash";
 import Catalog from './scenes/Catalog';
 import Profile from './scenes/Profile';
-import NavBar from './components/NavBar'
+import {NavBar} from './components/NavBar'
 import {Footer} from "./components/Footer";
 import './App.css';
 
